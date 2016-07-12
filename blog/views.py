@@ -6,6 +6,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 def post_list(request):
     return render(request, 'blog/post_list.html')
 
+def intro(request):
+    return render(request, 'blog/intro.html')
+
 
 
 
