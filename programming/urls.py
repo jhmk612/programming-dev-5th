@@ -6,6 +6,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.post_list, name='home'),
     url(r'^accounts/', include('accounts.urls', namespace='accounts')),
-    url(r'^intro/$', views.intro, name='intro')
+    url(r'^intro/$', views.intro, name='intro'),
+    url(r'^post/$', views.write_post, name='post'),
 
 ]

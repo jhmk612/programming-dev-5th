@@ -11,7 +11,7 @@ def signup(request):
         if form.is_valid():
             form.save()
 
-            return HttpResponseRedirect('/login')
+            return HttpResponseRedirect('/accounts/login')
     else:
         form=SignupForm()
 

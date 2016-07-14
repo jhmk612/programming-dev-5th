@@ -43,7 +43,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/home">홈으로</a>
+              <a class="navbar-brand" href="/">홈으로</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,7 +54,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">메뉴 <b class="caret"></b></a>
                       <ul class="dropdown-menu">
                         <li><a href="/intro">내 소개</a></li>
-                        <li><a href="#">Another action</a></li>
+                        <li><a href="/post">글 쓰기</a></li>
                         <li><a href="#">Something</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something</a></li>
@@ -138,7 +138,38 @@
       </a>
     </div>
 </div> <!-- end carousel -->
-       <h1 class="text-center">제 블로그에 오신 걸 환영합니다! <br><small class="subtitle">Carpe Diem! Seize the day!</small></h1>
+       <p><h1 class="text-center">제 블로그에 오신 걸 환영합니다! <br><small class="subtitle">Carpe Diem! Seize the day!</small></h1></p>
+       <h3 class='text-center'>소소한 일상의 추억들을 저장하는 공간입니다.</h3>
+       <hr>
+       <h2>블로그 글</h2>
+        <hr>
+          <table class="table table-striped">
+        <thead>
+        <tr>
+            <td><B>제목</B></td>
+            <td><B>태그</B></td>
+            <td><B>작성 시각</B></td>
+            <td><B>작성자</B></td>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+        <tr>
+
+            <td>{{post.title}}</td>
+            <td>{{post.tags}}</td>
+            <td>{{post.created_at}}</td>
+            <td>{{post.writer}}</td>
+
+
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <button class="btn btn-success"> <a href='/post'>글쓰기</a></button>
+
 
            <!--     end extras -->
     </div>

@@ -70,11 +70,22 @@
                       <input type="text" value="" class="form-control" placeholder="Search...">
                  </div>
               </form>
+              {%if not user.is_anonymous%}
               <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/signup">회원가입</a></li>
 
-                    <li><a href="/login">로그인</a></li>
+              <li><a href="/mypage"> {{user}}님, 환영합니다!</a></li>
+
+              <li><a href="/accounts/logout"> 로그아웃</a></li>
+
+
+              </ul>
+              {%else%}
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/accounts/signup">회원가입</a></li>
+
+                    <li><a href="/accounts/login">로그인</a></li>
                </ul>
+               {% endif %}
 
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
