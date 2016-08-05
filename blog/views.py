@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Post, lnglat_validator
+from .models import Post, lnglat_validator, Zipcode
 from .forms import PostForm
 from django.utils import timezone
 from django.contrib.auth.models import User
@@ -34,6 +34,7 @@ def write_post(request):
         f=PostForm()
 
     return render(request, 'blog/post.html', {'form':f})
+
 
 
 

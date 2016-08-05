@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^intro/$', views.intro, name='intro'),
     url(r'^post/$', views.write_post, name='post'),
 
+
 ]
